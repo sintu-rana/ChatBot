@@ -24,6 +24,28 @@ def send():
 	elif (user == "hi" or user == "hii" or user == "hiiii"):
 		txt.insert(END, "\n" + "Bot -> Hi there, what can I do for you?")
 
+	elif (user == "how are you"):
+		txt.insert(END, "\n" + "Bot -> fine! and you")
+
+	elif (user == "fine" or user == "i am good" or user == "i am doing good"):
+		txt.insert(END, "\n" + "Bot -> Great! how can I help you.")
+
+	elif (user == "thanks" or user == "thank you" or user == "now its my time"):
+		txt.insert(END, "\n" + "Bot -> My pleasure !")
+
+	elif (user == "what do you sell" or user == "what kinds of items are there" or user == "have you something"):
+		txt.insert(END, "\n" + "Bot -> We have coffee and tea")
+
+	elif (user == "tell me a joke" or user == "tell me something funny" or user == "crack a funny line"):
+		txt.insert(
+			END, "\n" + "Bot -> What did the buffalo say when his son left for college? Bison.! ")
+
+	elif (user == "goodbye" or user == "see you later" or user == "see yaa"):
+		txt.insert(END, "\n" + "Bot -> Have a nice day!")
+
+	else:
+		txt.insert(END, "\n" + "Bot -> Sorry! I didn't understand that")
+
 	e.delete(0, END)
 
 
@@ -32,6 +54,9 @@ lable1 = Label(root, bg=BG_COLOR, fg=TEXT_COLOR, text="Chatbot", font=FONT_BOLD,
 
 txt = Text(root, bg=BG_COLOR, fg=TEXT_COLOR, font=FONT, width=60)
 txt.grid(row=1, column=0, columnspan=2)
+
+scrollbar = Scrollbar(txt)
+scrollbar.place(relheight=1, relx=0.974)
 
 e = Entry(root, bg="#FFFAFA", fg=TEXT_COLOR, font=FONT, width=55)
 e.grid(row=2, column=0)
